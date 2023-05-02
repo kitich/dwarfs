@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, status
+from typing import Union
 import os
 from dotenv import dotenv_values
 from ai import gen_text, gen_image, compress_image, text_to_html, domain_to_name, gen_html
@@ -11,11 +12,15 @@ tinify_api_key = config['TINIFY_API_KEY']
 html_folder = config['HTML_FOLDER']
 
 @app.get("/")
-def read_root():
+def read_root(type: Union[str, None] = None, domain: Union[str, None] = None):
+    if type == None or domain == None:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Not enough parameters")
     return {"Dwarf API"}
 
-@app.get("/api/{type}/{domain}")
-def read_root(domain: str, type: str):
+@app.get("/api")
+def read_api(type: Union[str, None] = None, domain: Union[str, None] = None):
+    if type == None or domain == None:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Not enough parameters")
     if type == "dwarf":
         name = domain_to_name(domain)
         text_promt = f"Short story abou dwarf with surname {name}. Make him some name. Story up to 300 words."
