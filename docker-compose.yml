@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  fastapi_app:
+    build: .
+    image: dwarfs
+    container_name: dwarfs
+    ports:
+      - "8001:8000"
+    environment:
+      - OPENAI_API_KEY=your_openai_api_key
+      - TINIFY_API_KEY=your_tinify_api_key
+      - HTML_FOLDER=your_html_folder_path
+    volumes:
+      - /var/www/html:/app/html

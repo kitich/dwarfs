@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Dwarf {{ name }} Story</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+    <style>
+        .avatar {
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand" target="_blank" href="#">
+                    <img src="https://dwarfs.b-cdn.net/logod.png" height="32" alt=""
+                        loading="lazy" style="margin-top: -3px;" />
+                </a>
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="#intro">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://en.wikipedia.org/wiki/Dwarf_(folklore)"
+                                target="_blank">Who We Are</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://en.wikipedia.org/wiki/J._R._R._Tolkien"
+                                target="_blank">Dwarfs Father</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav d-flex flex-row">
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link" href="https://www.youtube.com/results?search_query=dwarves"
+                                target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link" href="https://twitter.com/search?q=dwarves%20lotr&src=typed_query&f=top"
+                                target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row mb-6"></div>
+            <div class="row d-flex justify-content-center"></div>
+            <div class="row mb-6 d-flex justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light" >
+                            <img src="{{ name }}.png"
+                                class="img-fluid" width="900px" style="object-fit: cover; height: 512px;"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dwarf {{ name }} Story</h5>
+                            <p class="card-text">
+                     {{ text }}
+                            </p>
+                            <div class="text-center"><a href="https://www.reddit.com/r/FanFiction/"
+                                    target="_blank"><button type="button" class="btn btn-warning">Read More Dwarf
+                                        Stories</button></a></div>
+                        </div>
+                        <div class="card-footer"><img src="https://100k-faces.glitch.me/random-image" alt="Avatar"
+                                class="avatar">&nbsp;&nbsp;Story by <b>Jane Brown</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+    <footer class="bg-light text-lg-start"></footer>
+</body>
+
+</html>
